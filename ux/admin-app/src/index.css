@@ -1,0 +1,22 @@
+:root {
+  /* 60% - Nền chủ đạo giúp dễ đọc */
+  --color-background: #F8FAFC; 
+  
+  /* 30% - Nhận diện thương hiệu (Header, Menu, Nút chính) */
+  --color-primary: #1E2A78;   
+
+  /* 10% - Điểm nhấn thu hút sự chú ý (Nút Call-to-action, Link) */
+  --color-accent: #6C5CE7;    
+
+  /* Màu trạng thái thành công (Thông báo, Checkmark) */
+  --color-success: #00B894;   
+  
+  /* Màu chữ mặc định (Mình tự thêm màu xám đậm để hợp với nền sáng) */
+  --color-text-main: #1E293B; 
+}
+
+/* Ví dụ cách gọi màu: */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+}

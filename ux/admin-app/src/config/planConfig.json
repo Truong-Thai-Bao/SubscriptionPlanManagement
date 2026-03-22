@@ -1,0 +1,20 @@
+{
+  "userTypes": [
+    { "value": "b2b", "label": "B2B (Business)" },
+    { "value": "b2c", "label": "B2C (Customer)" },
+    { "value": "internal", "label": "Internal" }
+  ],
+  "currencies": [
+    { "value": "VND", "label": "VND" },
+    { "value": "USD", "label": "USD" },
+    { "value": "EUR", "label": "EUR" }
+  ],
+  "featureDataTypes": [
+    { "value": "boolean", "label": "Boolean" },
+    { "value": "integer", "label": "Integer" }
+  ],
+  "featureBooleanValues": [
+    { "value": "true", "label": "True" },
+    { "value": "false", "label": "False" }
+  ]
+}

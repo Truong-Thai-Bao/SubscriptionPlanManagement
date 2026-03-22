@@ -1,0 +1,125 @@
+/* --- ĐỊNH NGHĨA BIẾN MÀU TOÀN CỤC --- */
+:root {
+  --color-background: #F8FAFC; 
+  --color-primary: #1E2A78;   
+  --color-accent: #6C5CE7;    
+  --color-success: #00B894;   
+  --color-text-main: #1E293B;
+  --color-text-light: #475569;
+  --color-border: #cbd5e1;
+}
+
+/* --- FORM SECTIONS --- */
+.form-section {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #ffffff; /* Giữ nền trắng cho nổi bật trên nền F8FAFC */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--color-primary); /* Đổi sang màu Primary */
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+/* --- FORM INPUTS & LAYOUT --- */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-col {
+  flex: 1;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+  transition: all 0.2s;
+  color: var(--color-text-main);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent); /* Đổi sang màu Accent khi focus */
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1); /* Hiệu ứng bóng mờ màu Accent */
+}
+
+.form-input-disabled {
+  background-color: #eef2f3;
+  color: #888;
+}
+
+/* --- BUTTONS --- */
+.btn-save {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--color-success); /* Đổi nút Save sang màu Success */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-save:hover { background-color: #00997a; } /* Màu Success đậm hơn chút */
+
+.btn-add-feature {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 2px dashed var(--color-border);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+  transition: all 0.2s;
+}
+.btn-add-feature:hover { 
+    border-color: var(--color-accent); 
+    color: var(--color-accent); 
+    background-color: rgba(108, 92, 231, 0.05); 
+}
+
+/* --- FEATURE CARD --- */
+.feature-card {
+  position: relative;
+  border: 1px solid var(--color-border);
+  padding: 15px 15px 5px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+}
+
+.btn-remove-feature {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #dc3545; /* Vẫn giữ màu đỏ cho nút xóa */
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}

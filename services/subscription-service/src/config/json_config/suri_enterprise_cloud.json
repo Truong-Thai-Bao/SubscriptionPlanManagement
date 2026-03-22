@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Tên miền riêng (Custom Domain)",
+    "feature_key": "FEAT_CUSTOM_DOMAIN",
+    "description": "Cho phép trung tâm sử dụng tên miền riêng",
+    "value_type": "boolean"
+  },
+  {
+    "name": "Báo cáo nâng cao",
+    "feature_key": "FEAT_ADVANCED_REPORT",
+    "description": "Xuất file Excel báo cáo doanh thu",
+    "value_type": "json"
+  }
+]

@@ -1,0 +1,42 @@
+.drawer-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.drawer-container {
+  position: fixed;
+  top: 0; width: 650px; height: 100vh;
+  background-color: var(--color-background); /* Nền tổng thể đổi thành màu Background F8FAFC */
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary); /* Đổi Header thành màu Primary */
+  color: white; /* Chữ màu trắng để nổi bật trên nền đậm */
+}
+
+.drawer-header h2 { margin: 0; }
+
+.btn-close {
+  background: none; border: none;
+  font-size: 1.5rem; cursor: pointer; color: white; /* Đổi màu nút đóng thành trắng */
+  transition: opacity 0.2s;
+}
+.btn-close:hover { opacity: 0.8; }
+
+.drawer-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}

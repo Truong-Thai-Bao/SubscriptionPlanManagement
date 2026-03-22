@@ -1,0 +1,85 @@
+{
+  "server": {
+    "internal_error": "Lỗi hệ thống nội bộ",
+    "db_connect_success": "Kết nối cơ sở dữ liệu thành công!",
+    "db_connect_fail": "Không thể kết nối cơ sở dữ liệu:",
+    "running": "Dịch vụ Subscription đang chạy mượt mà tại: http://127.0.0.1:8000",
+    "route_not_found": "Không tìm thấy trang",
+    "load_error": "Lỗi tải dữ liệu từ máy chủ"
+  },
+  "plan": {
+    "table": {
+      "th_name": "Tên gói cước",
+      "th_price": "Giá (Tháng/Năm)",
+      "th_limits": "Giới hạn (Tài nguyên)",
+      "th_subscribers": "Người dùng đang học",
+      "th_status": "Trạng thái",
+      "th_actions": "Hành động",
+      "unit_users": "Người dùng",
+      "unit_courses": "Khóa học",
+      "btn_edit": "Sửa",
+      "btn_deactivate": "Vô hiệu hóa",
+      "btn_delete": "Xóa",
+      "tooltip_no_delete": "Không thể xóa gói đang có người dùng",
+      "tooltip_delete": "Xóa gói cước này"
+    },
+    "feature_card": {
+      "label_name": "Tên tính năng",
+      "label_key": "Mã tính năng (Code)",
+      "label_type": "Loại dữ liệu",
+      "label_value": "Giá trị tính năng",
+      "label_desc": "Mô tả",
+      "placeholder_name": "VD: Tên miền riêng",
+      "placeholder_key": "VD: FEAT_DOMAIN",
+      "placeholder_value_int": "VD: 50",
+      "placeholder_value_text": "VD: #FF0000 hoặc chuỗi JSON...",
+      "placeholder_desc": "Mô tả chi tiết...",
+      "btn_remove": "Xóa"
+    },
+    "drawer": {
+      "title_create": "Tạo gói cước mới",
+      "title_edit": "Chỉnh sửa gói cước",
+      "section_general": "1. Thông tin chung",
+      "section_pricing": "2. Giá cả & Khuyến mãi",
+      "section_policy": "3. Cấu hình tài nguyên (Policy)",
+      "section_features": "4. Cấu hình tính năng mở rộng",
+      "btn_add_feature": "+ Thêm tính năng cấu hình",
+      "btn_save": "Lưu gói cước",
+      "is_active": "Kích hoạt?",
+      "labels": {
+        "name": "Tên gói cước",
+        "user_type": "Loại người dùng",
+        "currency": "Đơn vị tiền tệ",
+        "monthly_price": "Giá theo tháng",
+        "annual_discount": "Giảm giá năm (%)",
+        "annual_price": "Giá theo năm",
+        "max_days": "Số ngày tối đa",
+        "max_users": "Số người dùng tối đa",
+        "max_courses": "Số khóa học tối đa",
+        "max_storage": "Dung lượng lưu trữ (GB)",
+        "ai_tokens": "AI Tokens"
+      },
+      "placeholders": {
+        "name": "VD: Doanh nghiệp",
+        "max_days": "VD: 365"
+      }
+    },
+    "error": {
+      "fetch_failed": "Lỗi tải dữ liệu từ máy chủ.",
+      "server_connection": "Lỗi kết nối máy chủ.",
+      "delete_constraint": "Không thể xóa gói này vì đang có khách hàng sử dụng. Vui lòng vô hiệu hóa gói thay vì xóa.",
+      "old_plan_not_found": "Không tìm thấy gói cước cũ",
+      "not_found": "Không tìm thấy gói cước"
+    },
+    "success": {
+      "deactivate": "Đã vô hiệu hóa thành công",
+      "delete": "Đã xóa thành công",
+      "update": "Cập nhật thành công",
+      "create": "Tạo mới thành công"
+    },
+    "confirm": {
+      "delete": "Bạn có chắc chắn muốn xóa gói này?",
+      "deactivate": "Bạn có chắc muốn vô hiệu hóa gói này? Khách hàng mới sẽ không thể nhìn thấy gói này nữa."
+    }
+  }
+}
