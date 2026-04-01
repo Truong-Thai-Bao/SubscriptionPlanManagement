@@ -14,8 +14,8 @@ const PlanTable = ({ plans, onEdit, onDelete, onDeactivate }) => {
           <tr>
             <th>{t("plan.table.th_name")}</th>
             <th>{t("plan.table.th_price")}</th>
-            <th>{t("plan.table.th_limits")}</th>
-            <th>{t("plan.table.th_subscribers")}</th>
+            <th>{t("plan.table.th_currency")}</th>
+            <th>{t("plan.table.th_duration")}</th>
             <th>{t("plan.table.th_status")}</th>
             <th>{t("plan.table.th_actions")}</th>
           </tr>

@@ -29,6 +29,9 @@ i18next
   .init({
     // Set Vietnamese ('vi') as the default fallback language if the requested language is missing
     fallbackLng: 'en', 
+
+    //Must reload to load file into RAM when start server
+    preload:['en','vi'],
     
     // Configuration for the file system backend
     backend: {

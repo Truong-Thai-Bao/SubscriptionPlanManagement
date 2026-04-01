@@ -1,3 +1,5 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap");
+
 :root {
   /* 60% - Nền chủ đạo giúp dễ đọc */
   --color-background: #F8FAFC; 
@@ -19,4 +21,8 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text-main);
+  /* Ép buộc áp dụng font Satoshi cho toàn bộ hệ thống */
+  font-family: 'Satoshi', sans-serif !important;
+  /* Tăng độ đậm mặc định của chữ (500 là Medium, 600 là Semi-bold) */
+  font-weight: 600 !important;
 }

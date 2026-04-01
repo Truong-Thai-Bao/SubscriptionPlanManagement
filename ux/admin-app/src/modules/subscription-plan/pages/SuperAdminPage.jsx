@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next"; // <-- Added i18n hook
-import PlanTable from "../../../components/admin/PlanTable/PlanTable.jsx";
+import PlanTable from "../../../components/admin/PlanTable/SubPlanTable.jsx";
 import PlanDrawer from "../../../components/admin/PlanDrawer/PlanDrawer.jsx";
 import planApiService from "../../../services/planService.js";
 import "./SuperAdminPage.css";

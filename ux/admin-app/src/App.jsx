@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import NotFound from "./modules/subscription-plan/pages/NotFoundPage";
 import SuperAdminPage from "./modules/subscription-plan/pages/SuperAdminPage";
 import "./config/i18n.js";
+import "./styles/style.css";
 
 function App() {
   return (

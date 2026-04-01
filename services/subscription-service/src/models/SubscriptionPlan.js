@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
-
+const {USER_TYPE, PAYMENT_TERM, CURRENCY } = require('../constant/enum.js');
 
 /**
  * @file SubscriptionPlan.js
@@ -28,20 +28,14 @@ const SubscriptionPlan = sequelize.define('SubscriptionPlan', {
     
     // The target audience or user category for this plan (b2b, b2c, or internal)
     user_type: { 
-        type: DataTypes.ENUM('b2b', 'b2c', 'internal'), 
+        type: DataTypes.ENUM(Object.values(USER_TYPE)), 
         defaultValue: 'b2b' 
     },
     
     // The billing cycle/frequency for this plan
     payment_term: { 
-        type: DataTypes.ENUM('yearly', 'monthly', 'quarterly', 'pay per use'), 
+        type: DataTypes.ENUM(Object.values(PAYMENT_TERM)), 
         defaultValue: 'monthly' 
-    },
-    
-    // Foreign Key: Links to the associated Feature model
-    feature_id: { 
-        type: DataTypes.BIGINT.UNSIGNED, 
-        allowNull: true 
     },
     
     // Foreign Key: Links to the associated SubscriptionPolicy model
@@ -55,14 +49,14 @@ const SubscriptionPlan = sequelize.define('SubscriptionPlan', {
         type: DataTypes.DECIMAL(15, 2), 
         allowNull: false,
         validate: {
-            min: { args: [0], msg: "Price must not be an negative number" },
-            isInt: { msg: "Price must be integer" }
+            min: { args: [0], msg: "plan.validation.price_less_than_zero" },
+            isInt: { msg: "plan.validation.price_not_int" }
         }
     },
     
     // The currency used for the price (defaults to 'VND')
     currency: { 
-        type: DataTypes.STRING(10), 
+        type: DataTypes.ENUM(Object.values(CURRENCY)), 
         defaultValue: 'VND' 
     },
     

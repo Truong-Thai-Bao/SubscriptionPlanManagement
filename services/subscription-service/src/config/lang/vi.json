@@ -7,7 +7,26 @@
     "route_not_found": "Không tìm thấy trang",
     "load_error": "Lỗi tải dữ liệu từ máy chủ"
   },
+  "policy": {
+    "validation": {
+      "max_days_min": "Số ngày tối đa không được nhỏ hơn 0.",
+      "max_days_int": "Số ngày tối đa phải là số nguyên.",
+      "max_users_min": "Số người dùng không được nhỏ hơn 0.",
+      "max_users_int": "Số người dùng phải là số nguyên.",
+      "max_storage_min": "Dung lượng lưu trữ không được nhỏ hơn 0.",
+      "max_storage_int": "Dung lượng lưu trữ phải là số nguyên.",
+      "max_courses_min": "Số khóa học không được nhỏ hơn 0.",
+      "max_courses_int": "Số khóa học phải là số nguyên.",
+      "ai_tokens_min": "AI tokens không được nhỏ hơn 0.",
+      "ai_tokens_int": "AI tokens phải là số nguyên.",
+      "grace_period_min": "Thời gian ân hạn không được nhỏ hơn 0.",
+      "grace_period_int": "Thời gian ân hạn phải là số nguyên."
+    }
+  },
   "plan": {
+    "validation": {
+      "price": "Giá tiền không được là số âm"
+    },
     "table": {
       "th_name": "Tên gói cước",
       "th_price": "Giá (Tháng/Năm)",

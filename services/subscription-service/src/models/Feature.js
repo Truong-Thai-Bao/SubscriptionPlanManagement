@@ -39,7 +39,7 @@ const Feature = sequelize.define('Feature', {
     // The data type of the feature's value (e.g., boolean, integer, string, or json_path)
     value_type: { 
         type: DataTypes.STRING(255), 
-        comment: 'boolean, integer, string, hoặc json_path' 
+        comment: 'boolean, integer, string,' 
     },
     
     // The actual value, limit, or configuration path associated with the feature

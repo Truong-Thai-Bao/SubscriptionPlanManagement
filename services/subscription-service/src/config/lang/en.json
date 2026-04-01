@@ -4,8 +4,31 @@
     "db_connect_success": "Database connection successful!",
     "db_connect_fail": "Cannot connect to Database:",
     "running": "Subscription Service is running smoothly at: http://127.0.0.1:8000",
-    "route_not_found":"Not found",
+    "route_not_found":"Not found this url",
     "load_error":"Load error from server"
+  },
+  "auth":{
+     "missing": "Unauthorized: Missing user context from API Gateway",
+     "forbiden_tenant_access": "Forbiden tenant access",
+     "forbidden_role":"Your role is not validate"
+  },
+  "subscription":{
+    "validate":{
+      "not_active" : "Subscription is not active",
+      "not_allow_feature" :"Subscription not allows this feature"
+    },"not_found":"Not found this subscription"
+  },
+  "tenant":{
+    "not_found":"Tenant not found",
+    "validation": {
+      "guid_required": "Tenant GUID is required.",
+      "guid_empty": "Tenant GUID cannot be empty.",
+      "guid_invalid": "Tenant GUID must be a valid UUID v4 format.",
+      "name_required": "Organization name is required.",
+      "name_empty": "Organization name cannot be empty.",
+      "name_length": "Organization name must be between 2 and 255 characters.",
+      "email_invalid": "Provided email address is invalid."
+    }
   },
   "policy":{
     "validation": {
@@ -23,15 +46,66 @@
       "grace_period_int": "Grace period must be an integer."
     }
   },
+  "user": {
+    "validation": {
+      "username_required": "Username is required.",
+      "username_empty": "Username cannot be empty.",
+      "username_length": "Username must be between 4 and 100 characters.",
+      "password_required": "Password hash is required.",
+      "password_empty": "Password cannot be empty.",
+      "email_required": "Email address is required.",
+      "email_invalid": "Invalid email format.",
+      "dob_future": "Date of birth cannot be a future date."
+    }
+  },
+  "tenant_role": {
+    "validation": {
+      "name_required": "Role name is required.",
+      "name_empty": "Role name cannot be empty."
+    },"success":{
+        "deactivate": "Deactivated user successfully",
+        "activate": "Activated user successfully",
+        "delete": "Deleted user successfully",
+        "update": "Updated user successfully",
+        "create": "Created user successfully",
+        "inactive": "User account has been successfully inactivated.",
+        "banned": "User account has been successfully banned."
+    },"not_found":"Cannot found this tenant role"
+  },
+  "tenant_user": {
+    "assigned":{
+      "success":"Tenant user has been assigned successfully",
+      "failed":"Tenant user has been assigned failed"
+    },
+    "validation": {
+      "tenant_id_required": "A user must be assigned to a specific Tenant (tenant_id is missing).",
+      "password_required": "Password is required.",
+      "password_empty": "Password cannot be empty.",
+      "email_required": "Email address is required.",
+      "email_invalid": "Invalid email format.",
+      "dob_future": "Date of birth cannot be a future date.",
+      "invalid_status": "Invalid status parameter. Allowed values are: active, inactive, banned."
+    },"success":{
+        "active": "Activated user successfully",
+        "delete": "Deleted user successfully",
+        "update": "Updated user successfully",
+        "create": "Created user successfully",
+        "inactive": "User account has been successfully inactivated.",
+        "banned": "User account has been successfully banned."
+    },"not_found":"Cannot found this tenant user"
+  },
   "plan": {
     "validation": {
-      "price":"Price must not be a negative number"
+      "price_less_than_zero":"Price must not be a negative number",
+      "price_not_int":"Price must not be integer number",
+      "not_delete":"This Subscription Plan must not delete because there are many subscribers."
     },
+    "required_upgrade": "Access Denied: Your current plan is inactive or does not support the '{{feature}}' feature. Please upgrade your plan.",
     "table": {
-      "th_name": "Name's package",
-      "th_price": "Price (Month/Year)",
-      "th_limits": "Limits (Resource)",
-      "th_subscribers": "Active Subscribers",
+      "th_name": "Name",
+      "th_price": "Price",
+      "th_duration":"Duration",
+      "th_currency":"Currency",
       "th_status": "Status",
       "th_actions": "Actions",
       "unit_users": "Users",
@@ -91,10 +165,12 @@
       "not_found": "Plan not found"
     },
     "success":{
-        "deactivate": "Deactivated successfully",
-        "delete": "Deleted successfully",
-        "update": "Updated successfully",
-        "create": "Created successfully"
+        "deactivate": "Deactivated plan successfully",
+        "activate": "Activated plan successfully",
+        "delete": "Deleted plan successfully",
+        "update": "Updated plan successfully",
+        "create": "Created plan successfully",
+        "get":"Fetch a plan successfully"
     },
     "confirm": {
       "delete": "Are you sure you want to delete this plan?",
