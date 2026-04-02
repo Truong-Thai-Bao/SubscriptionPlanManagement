@@ -2,13 +2,12 @@
  * @class CourseRepository
  * @description This class for managing db operations related to LmsCourse table
  */
-const { LmsCourse, LmsCategory } = require('../models/relationship');
 const BaseRepository = require('./BaseRepository');
 
 class CourseRepository extends BaseRepository {
 
     constructor(){
-        super(LmsCourse);
+        super();
     }
 
     //send query to db
