@@ -1,0 +1,229 @@
+{
+  "system": {
+    "error": {
+      "system_error": "Lỗi hệ thống",
+      "not_found": "Không tìm thấy"
+    },
+    "validation": {
+      "validation": "Dữ liệu không hợp lệ"
+    }
+  },
+
+  "validation": {
+    "register": {
+      "email" : {
+        "email_required": "Vui lòng nhập email",
+        "email_format": "Vui lòng nhập email hợp lệ",
+        "email_min": "Email phải có ít nhất 10 ký tự"
+      },
+
+      "password": {
+        "password_required": "Vui lòng nhập mật khẩu",
+        "password_min": "Mật khẩu phải có ít nhất 8 ký tự",
+        "password_complexity": "Mật khẩu cần ít nhất 8 ký tự, bao gồm chữ hoa, chữ số và ký tự đặc biệt (ví dụ: @, #, !)."
+      },
+
+      "role_id": {
+        "role_required": "Vui lòng chọn vai trò"
+      },
+
+      "phone" : {
+        "phone_max": "Số điện thoại không được vượt quá 20 số",
+        "phone_required": "Vui lòng nhập số điện thoại"
+      },
+
+      "organization_name" : {
+        "name_required" : "Vui lòng nhập tên tổ chức",
+        "name_min": "Tên tổ chức phải có ít nhất 6 ký tự"
+      },
+
+      "otp" : {
+        "otp_length": "Vui lòng nhập mã OTP 6 số",
+        "otp_require": "Vui lòng nhập mã OTP"
+      },
+
+      "captcha": {
+        "captcha_required": "Vui lòng xác thực captcha"
+      },
+
+      "isAgreed": {
+        "only": "Vui lòng đọc và đồng ý với điều khoản dịch vụ"
+      }
+    },
+
+    "feature" : {
+      "name": {
+        "name_required": "Vui lòng nhập tên tính năng",
+        "name_max": "Tên tính năng không vượt quá 40 ký tự",
+        "name_min": "Tên tính năng phải có ít nhất 3 ký tự"
+      },
+
+      "description": {
+        "description_required": "Vui lòng nhập mô tả",
+        "description_min": "Mô tả phải có ít nhất 5 ký tự"
+      },
+
+      "value_type": {
+        "value_type_required": "Vui lòng chọn kiểu dữ liệu",
+        "value_type_min": "Kiểu dữ liệu phải có ít nhất 3 ký tự"
+      },
+
+      "feature_value": {
+        "feature_value_required": "Vui lòng nhập giá trị",
+        "feature_value_min": "Giá trị phải có ít nhất 5 ký tự"
+      }
+    },
+
+    "category":{
+      "name": {
+        "name_required": "Vui lòng nhập tên danh mục",
+        "name_max": "Tên danh mục không vượt quá 40 ký tự",
+        "name_min": "Tên danh mục phải có ít nhất 3 ký tự"
+      },
+      "parent": {
+        "parent_number": "Vui lòng nhập số",
+        "parent_required": "Vui lòng chọn danh mục chính",
+        "parent_positive": "Vui lòng nhập số nguyên dương"
+      },
+      "description":{
+        "description_required": "Vui lòng nhập mô tả",
+        "description_min": "Mô tả phải có ít nhất 5 ký tự"
+      }
+    },
+
+    "role": {
+      "name": {
+        "name_required": "Vui lòng nhập tên vai trò",
+        "name_max": "Tên vai trò không vượt quá 20 ký tự",
+        "name_min": "Tên vai trò phải có ít nhất 3 ký tự"
+      },
+      "description": {
+        "description_required": "Vui lòng nhập mô tả",
+        "description_min": "Mô tả phải có ít nhất 5 ký tự"
+      }
+    },
+
+    "permission": {
+      "name": {
+        "name_required": "Vui lòng nhập tên quyền",
+        "name_max": "Tên quyền không vượt quá 20 ký tự",
+        "name_min": "Tên quyền phải có ít nhất 3 ký tự"
+      },
+      "description": {
+        "description_required": "Vui lòng nhập mô tả",
+        "description_min": "Mô tả phải có ít nhất 5 ký tự"
+      },
+      "action": {
+        "action_required": "Vui lòng nhập tên hành động",
+        "action_min": "Hành động phải có ít nhất 2 ký tự"
+      },
+      "feature": {
+        "feature_number": "Vui lòng nhập số",
+        "feature_required": "Vui lòng chọn tính năng",
+        "feature_positive": "Vui lòng nhập số nguyên dương"
+      }
+    },
+    "role_permission": {
+      "role_id": {
+        "role_id_number": "Vui lòng nhập số",
+        "role_id_required": "Vui lòng chọn vai trò",
+        "role_id_positive": "Vui lòng nhập số nguyên dương"
+      },
+      "permission_id": {
+        "permission_id_number": "Vui lòng nhập số",
+        "permission_id_required": "Vui lòng chọn quyền",
+        "permission_id_positive": "Vui lòng nhập số nguyên dương"
+      },
+      "moodle_token":{
+        "username_require": "Vui lòng nhập tên người dùng",
+        "password_require": "Vui lòng nhập mật khẩu"
+      }
+      
+    }
+  },
+
+  "function": {
+    "role": {
+      "get_role_success": "Lấy danh sách vai trò thành công",
+      "create_role_success": "Tạo vai trò mới thành công",
+      "update_role_success": "Cập nhật vai trò thành công",
+      "delete_role_success": "Xóa vai trò thành công",
+      "name_exists": "Tên vai trò đã tồn tại",
+      "role_not_exists": "Vai trò không tồn tại",
+      "status_wrong": "Trạng thái không hợp lệ"
+    },
+    "permission": {
+      "get_permission_success": "Lấy danh sách quyền thành công",
+      "create_permission_success": "Tạo quyền mới thành công",
+      "update_permission_success": "Cập nhật quyền thành công",
+      "deleted_permission_success": "Xóa quyền thành công",
+      "name_exists": "Tên quyền đã tồn tại",
+      "permission_not_exists": "Quyền không tồn tại",
+      "status_wrong": "Trạng thái không hợp lệ"
+    },
+    "feature": {
+      "feature_not_exists": "Tính năng không tồn tại",
+      "get_feature_success": "Lấy danh sách tính năng thành công",
+      "get_active_feature_success": "Lấy danh sách tính năng đang hoạt động thành công",
+      "delete_feature_success": "Xóa tính năng thành công",
+      "create_feature_success": "Tạo mới tính năng thành công",
+      "delete_failed_for_subcription_plan": "Không thể xóa tính năng này vì đang được sử dụng trong một hoặc nhiều gói đăng ký.",
+      "delete_failed_for_permission": "Không thể xóa tính năng này vì đang được sử dụng trong một hoặc nhiều quyền.",
+      "name_exists": "Tên tính năng đã tồn tại",
+      "update_json_fail": "Tải lên json thất bại",
+      "update_feature_success": "Cập nhật tính năng thành công"
+    },
+    "otp": {
+      "request_otp": "Vui lòng yêu cầu nhận mã OTP trước",
+      "expired_otp": "Mã OTP đã hết hạn",
+      "wrong_otp": "Sai mã OTP",
+      "email_require": "Vui lòng nhập email",
+      "send_otp_success": "Mã OTP đã được gửi đến email của bạn",
+      "otp_require":"Vui lòng nhập mã OTP",
+      "otp_verified": "Xác thực email thành công"
+    },
+    "register": {
+      "email_exists": "Email đã tồn tại",
+      "captcha_failed": "Xác nhận captcha thất bại",
+      "register_success": "Đăng ký tài khoản thành công",
+      "organization_email_required": "Vui lòng nhập email của tổ chức"
+    },
+    "role_permission": {
+      "get_success": "Lấy danh sách vai trò quyền thành công",
+      "rolePermission_not_exist": "Vai trò quyền không tồn tại",
+      "get_role_permission_success": "Lấy danh sách quyền của vai trò thành công",
+      "delete_permission_of_role_success": "Xóa quyền của vai trò thành công",
+      "create_permission_of_role_success": "Tạo quyền mới của vai trò thành công",
+      "role_permission_exist": "Quyền đã tồn tại",
+      "update_permission_of_role_success": "Cập nhật quyền của vai trò thành công"
+    },
+    "user" : {
+      "not_exist": "Người dùng không tồn tại"
+    },
+    "moodle": {
+      "already_synced": "Tài khoản học tập của bạn đã được kích hoạt trước đó. Bạn có thể bắt đầu vào học ngay!" ,
+      "sync_success": "Kích hoạt tài khoản học tập thành công!",
+      "sync_failed": "Kích hoạt tài khoản học tập thất bại. Vui lòng thử lại sau."
+    },
+    "moodle_token": {
+      "success": "Tạo moodle token cho người dùng thành công"
+    },
+    "category":{
+      "parent_not_found": "Danh mục chính không tồn tại",
+      "creat_success": "Tạo danh mục thành công",
+      "not_exist": "Danh mục không tồn tại",
+      "delete_success": "Xóa danh mục thành công",
+      "has_children": "Vui lòng xóa tất cả các danh mục con trước khi xóa danh mục cha này",
+      "get_success": "Lấy tất cả danh mục thành công"
+    }
+  },
+
+  "authentication": {
+    "login": {
+      "wrong_password": "Thông tin đăng nhập không hợp lệ",
+      "login_success": "Đăng nhập thành công",
+      "user_blocked": "Tài khoản của bạn đã bị khóa do nhập sai mật khẩu quá nhiều lần",
+      "require": "Vui lòng nhập email hoặc tên đăng nhập"
+    }
+  }
+}

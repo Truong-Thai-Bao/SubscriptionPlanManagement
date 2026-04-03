@@ -1,0 +1,9 @@
+{
+  "max_students": 1000,
+  "storage_limit": "50GB",
+  "permissions": [
+    "read",
+    "write",
+    "upload"
+  ]
+}
