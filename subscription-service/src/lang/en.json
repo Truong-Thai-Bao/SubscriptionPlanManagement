@@ -1,0 +1,228 @@
+{
+  "system": {
+    "error": {
+      "system_error": "System Error",
+      "not_found": "Not Found"
+    },
+    "validation": {
+      "validation": "Validation Failed"
+    }
+  },
+
+  "validation": {
+    "register": {
+      "email": {
+        "email_required": "Please input email",
+        "email_format": "Please input correct email format",
+        "email_min": "Email must be at least 10 characters"
+      },
+
+      "password": {
+        "password_required": "Please input password",
+        "password_min": "Password must be at least 6 characters",
+        "password_complexity": "Password must be at least 8 characters long and include uppercase letters, numbers, and special characters (e.g., @, #, !)."
+      },
+
+      "role_id": {
+        "role_required": "Please select role"
+      },
+
+      "phone": {
+        "phone_max": "Phone number cannot exceed 20 characters",
+        "phone_required": "Please input phone number"
+      },
+
+      "organization_name": {
+        "name_required": "Please input organization name",
+        "name_min": "organization name must be at least 6 characters"
+      },
+
+      "otp": {
+        "otp_length": "Please input OTP code with 6 number",
+        "otp_require": "Please input OTP code"
+      },
+
+      "captcha": {
+        "captcha_required": "Please solve captcha"
+      },
+
+      "isAgreed": {
+        "only": "Please read and accept with our term and conditions"
+      }
+    },
+
+    "feature": {
+      "name": {
+        "name_required": "Please input feature name",
+        "name_max": "Feature name cannot exceed 40 characters",
+        "name_min": "Feature must be at least 3 characters"
+      },
+
+      "description": {
+        "description_required": "Please input description",
+        "description_min": "Description must be at least 5 characters"
+      },
+
+      "value_type": {
+        "value_type_required": "Please choose value type of feature",
+        "value_type_min": "Value type must be at least 3 characters"
+      },
+
+      "feature_value": {
+        "feature_value_required": "Please input description feature value",
+        "feature_value_min": "Feature value must be at least 3 characters"
+      }
+    },
+
+    "category" :{
+      "name": {
+        "name_required": "Please input category name",
+        "name_max": "Category name cannot exceed 40 characters",
+        "name_min": "Category must be at least 3 characters"
+      },
+      "parent": {
+        "parent_number": "Parent ID must be a number",
+        "parent_required": "Please select a parent",
+        "parent_positive": "Parent ID must be a positive number"
+      },
+      "description":{
+        "description_required": "Please input description",
+        "description_min": "Description must be at least 5 characters"
+      }
+    },
+
+    "role": {
+      "name": {
+        "name_required": "Please input role name",
+        "name_max": "Role name cannot exceed 20 characters",
+        "name_min": "Role name must be at least 3 characters"
+      },
+      "description": {
+        "description_required": "Please input description",
+        "description_min": "Description must be at least 5 characters"
+      }
+    },
+
+    "permission": {
+      "name": {
+        "name_required": "Please input permission name",
+        "name_max": "Permission name cannot exceed 20 characters",
+        "name_min": "Permission name must be at least 3 characters"
+      },
+      "description": {
+        "description_required": "Please input description",
+        "description_min": "Description must be at least 5 characters"
+      },
+      "action": {
+        "action_required": "Please input action",
+        "action_min": "Action must be at least 2 characters"
+      },
+      "feature": {
+        "feature_number": "Feature ID must be a number",
+        "feature_required": "Please select a feature",
+        "feature_positive": "Feature ID must be a positive number"
+      }
+    },
+    "role_permission": {
+      "role_id": {
+        "role_id_number": "Role ID must be a number",
+        "role_id_required": "Please select a role",
+        "role_id_positive": "Role ID must be a positive number"
+      },
+      "permission_id": {
+        "permission_id_number": "Permission ID must be a number",
+        "permission_id_required": "Please select a Permission",
+        "permission_id_positive": "Permission ID must be a positive number"
+      },
+      "moodle_token":{
+        "username_require": "Please input username",
+        "password_require": "Please input password"
+      }
+    }
+  },
+
+  "function": {
+    "role": {
+      "get_role_success": "Get all roles successfully",
+      "create_role_success": "Role created successfully",
+      "update_role_success": "Role updated successfully",
+      "delete_role_success": "Role deleted successfully",
+      "name_exists": "Role name already exists",
+      "role_not_exists": "Role not exists",
+      "status_wrong": "Please choose a valid status"
+    },
+    "permission": {
+      "get_permission_success": "Get all permissions successfully",
+      "create_permission_success": "Permission created successfully",
+      "update_permission_success": "Permission updated successfully",
+      "deleted_permission_success": "Permission deleted successfully",
+      "name_exists": "Permission name already exists",
+      "permission_not_exists": "Permission not exists",
+      "status_wrong": "Please choose a valid status"
+    },
+    "feature": {
+      "feature_not_exists": "Feature not exists",
+      "get_feature_success": "Get all features successfully",
+      "get_active_feature_success": "Get all active features successfully",
+      "delete_feature_success": "Feature deleted successfully",
+      "create_feature_success": "Feature created successfully",
+      "delete_failed_for_subcription_plan": "Cannot delete this feature because it is currently used in one or more subscription plans.",
+      "delete_failed_for_permission": "Cannot delete this feature because it is currently used in one or more permissions.",
+      "name_exists": "Feature name already exists",
+      "update_json_fail": "Json updated failed",
+      "update_feature_success": "Feature updated successfully"
+    },
+    "otp": {
+      "request_otp": "Please request an OTP code first",
+      "expired_otp": "OTP code has expired",
+      "wrong_otp": "Wrong OTP code",
+      "email_require": "Please input your email",
+      "send_otp_success": "OTP code has been sent successfully to your email",
+      "otp_require":"Please input OTP code",
+      "otp_verified": "Verify email successfully"
+    },
+    "register": {
+      "email_exists": "Email already exists",
+      "captcha_failed": "Captcha verification failed",
+      "register_success": "Register Successfully!",
+      "organization_email_required": "Please input your organization email ID"
+    },
+    "role_permission": {
+      "get_success": "Get all role permission successfully",
+      "rolePermission_not_exist": "Role Permission not exist",
+      "get_role_permission_success": "Get all permissions of role successfully",
+      "delete_permission_of_role_success": "Role's permission deleted successfully",
+      "create_permission_of_role_success": "Role's permission created successfully",
+      "role_permission_exist": "Role's Permission already exist",
+      "update_permission_of_role_success": "Role's permission updated successfully"
+    },
+    "user" : {
+      "not_exist": "User not exist"
+    },
+    "moodle": {
+      "already_synced": "Your learning account is already active. You can start your courses now!",
+      "sync_success" : "Learning account activated successfully!",
+      "sync_failed": "Learning account activation failed. Please try again later."
+    },
+    "moodle_token": {
+      "success": "Create user moodle token successfully"
+    },
+    "category":{
+      "parent_not_found": "Parent not exist",
+      "creat_success": "Category created successfully",
+      "not_exist": "Category not exist",
+      "delete_success": "Category deleted successfully",
+      "has_children": "Please delete all sub-categories before attempting to delete this parent category",
+      "get_success": "Get all categories successfully"
+    }
+  },
+
+  "authentication": {
+    "login": {
+      "wrong_password": "Invalid login information",
+      "login_success": "Login Successfully",
+      "user_blocked": "Your account has been locked due to multiple failed login attempts",
+      "require": "Please input email or username"
+    }
+  }
+}

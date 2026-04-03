@@ -1,0 +1,777 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Gateway",
+    "description": "API Gateway Documentation",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {
+    "BearerAuth": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "Nhap token theo dinh dang: Bearer <JWT_TOKEN>"
+    }
+  },
+  "paths": {
+    "/api/health/": {
+      "get": {
+        "description": "Lấy danh sách health check.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Gateway Health"
+        ],
+        "summary": "List health checks"
+      }
+    },
+    "/subscriptions/api/auth/register": {
+      "post": {
+        "description": "Đăng ký tài khoản mới.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "captchaToken": {
+                  "example": "any"
+                },
+                "organization_name": {
+                  "example": "any"
+                },
+                "role_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Auth Service"
+        ],
+        "summary": "Register"
+      }
+    },
+    "/subscriptions/api/auth/send-otp": {
+      "post": {
+        "description": "Gửi mã OTP tới email/kênh xác thực.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Auth Service"
+        ],
+        "summary": "Send OTP"
+      }
+    },
+    "/subscriptions/api/auth/verify-otp": {
+      "post": {
+        "description": "Xác thực mã OTP.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "otp": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Subscription Auth Service"
+        ],
+        "summary": "Verify OTP"
+      }
+    },
+    "/subscriptions/api/auth/login": {
+      "post": {
+        "description": "Đăng nhập để nhận JWT token.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "loginInput": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Auth Service"
+        ],
+        "summary": "Login"
+      }
+    },
+    "/subscriptions/api/roles/": {
+      "get": {
+        "description": "Lấy danh sách role.",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Roles Service"
+        ],
+        "summary": "List roles",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "description": "Tạo mới role.",
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Roles Service"
+        ],
+        "summary": "Create role",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/roles/{id}": {
+      "put": {
+        "description": "Cập nhật role.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Roles Service"
+        ],
+        "summary": "Update role",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "description": "Xóa role.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Roles Service"
+        ],
+        "summary": "Delete role",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/permissions/": {
+      "get": {
+        "description": "Lấy danh sách permission.",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Permissions Service"
+        ],
+        "summary": "List permissions",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "description": "Tạo mới permission.",
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Permissions Service"
+        ],
+        "summary": "Create permission",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/permissions/{id}": {
+      "put": {
+        "description": "Cập nhật permission.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Permissions Service"
+        ],
+        "summary": "Update permission",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "description": "Xóa permission.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Permissions Service"
+        ],
+        "summary": "Delete permission",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/features/active": {
+      "get": {
+        "description": "Lấy danh sách feature đang active.",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Features Service"
+        ],
+        "summary": "Get active features",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/features/": {
+      "get": {
+        "description": "Lấy danh sách feature.",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Features Service"
+        ],
+        "summary": "List features",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "description": "Tạo mới feature.",
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Features Service"
+        ],
+        "summary": "Create feature",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/features/{id}": {
+      "delete": {
+        "description": "Xóa feature.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Features Service"
+        ],
+        "summary": "Delete feature",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "put": {
+        "description": "Cập nhật feature.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Features Service"
+        ],
+        "summary": "Update feature",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/role-permissions/all": {
+      "get": {
+        "description": "Lấy toàn bộ danh sách role permission.",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Role-Permissions Service"
+        ],
+        "summary": "Get all role permissions",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/role-permissions/{id}": {
+      "get": {
+        "description": "Lấy chi tiết role permission theo id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Role-Permissions Service"
+        ],
+        "summary": "Get role permission detail",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "put": {
+        "description": "Cập nhật role permission.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Role-Permissions Service"
+        ],
+        "summary": "Update role permission",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/role-permissions/": {
+      "delete": {
+        "description": "Xóa role permission.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "role_id": {
+                  "example": "any"
+                },
+                "permission_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Role-Permissions Service"
+        ],
+        "summary": "Delete role permission",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "description": "Tạo mới role permission.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "role_id": {
+                  "example": "any"
+                },
+                "permission_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Role-Permissions Service"
+        ],
+        "summary": "Create role permission",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/moodle/moodle-user": {
+      "post": {
+        "description": "Tạo người dùng Moodle.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Moodle Service"
+        ],
+        "summary": "Create Moodle user",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/moodle/moodle-token": {
+      "post": {
+        "description": "Tạo moodle token cho Moodle.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Moodle Service"
+        ],
+        "summary": "Generate Moodle token",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/categories/": {
+      "post": {
+        "description": "Tạo mới category.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "parent_id": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "tags": [
+          "Subscription Categories Service"
+        ],
+        "summary": "Create category",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "description": "Lấy danh sách category.",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Categories Service"
+        ],
+        "summary": "List categorys",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/subscriptions/api/categories/{id}": {
+      "delete": {
+        "description": "Xóa category.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Subscription Categories Service"
+        ],
+        "summary": "Delete category",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Gateway Health",
+      "description": "Trạng thái va khả năng sống của API Gateway."
+    },
+    {
+      "name": "Subscription Auth Service",
+      "description": "Đăng ký, đăng nhập, OTP va xác thực tài khoản."
+    },
+    {
+      "name": "Subscription Roles Service",
+      "description": "CRUD vai trò (roles) cho hệ thống subscription."
+    },
+    {
+      "name": "Subscription Permissions Service",
+      "description": "CRUD quyền (permissions) cho hệ thống subscription."
+    },
+    {
+      "name": "Subscription Features Service",
+      "description": "CRUD feature va danh sách feature dang active."
+    },
+    {
+      "name": "Subscription Role-Permissions Service",
+      "description": "CRUD mapping giữa role va permission."
+    },
+    {
+      "name": "Subscription Moodle Service",
+      "description": "Endpoint tích hợp Moodle user va token."
+    },
+    {
+      "name": "Subscription Categories Service",
+      "description": "CRUD category trong subscription service."
+    }
+  ]
+}
